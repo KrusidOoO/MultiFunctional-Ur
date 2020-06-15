@@ -1,0 +1,73 @@
+﻿<Window x:Class="Multifunktionelt_ur.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Multifunktionelt_ur"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="750" Width="800">
+    <Grid>
+        <TabControl Name="LotOfTime">
+            <TabItem Name="Clock">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Klokken" Foreground="Black"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid>
+                    <TextBlock x:Name="Watch" HorizontalAlignment="Left" Margin="330,275,0,0" TextWrapping="Wrap" Text="00:00:00" VerticalAlignment="Top" FontSize="46"></TextBlock>
+                </Grid>
+            </TabItem>
+            <TabItem Name="StopWatch">
+                <TabItem.Header>
+                    <StackPanel>
+                        <TextBlock Text="Stopur" Foreground="Black"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid>
+                    <TextBlock x:Name="stopWatch" HorizontalAlignment="Left" Margin="330,75,0,0" TextWrapping="Wrap" Text="00:00:00" VerticalAlignment="Top" FontSize="46"/>
+                    <Button x:Name="startStopWatch" Content="Start" HorizontalAlignment="Left" Margin="375,150,0,0" VerticalAlignment="Top" Width="75" Height="50" Click="StartStopWatch_Click"/>
+                    <Button x:Name="stopStopWatch" Content="Stop" HorizontalAlignment="Left" Margin="475,150,0,0" VerticalAlignment="Top" Width="75" Height="50" Click="StopStopWatch_Click"/>
+                    <Button x:Name="lap" Content="Omgang" HorizontalAlignment="Left" Margin="275,150,0,0" VerticalAlignment="Top" Width="75" Height="50" Click="Lap_Click" />
+                    <Button x:Name="reset" Content="Nulstil" HorizontalAlignment="Left" Margin="375,215,0,0" VerticalAlignment="Top" Width="75" Height="50" Click="Reset_Click" />
+                    <ListBox x:Name="lapsListBox" HorizontalAlignment="Left" Height="150" Margin="327,350,0,0" VerticalAlignment="Top" Width="175"/>
+
+                </Grid>
+            </TabItem>
+            <TabItem Name="CountDown">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Nedtælling" Foreground="Black"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid>
+                    <TextBlock x:Name="Watch2" HorizontalAlignment="Center" Margin="0,-450,0,0" TextWrapping="Wrap" Text="00:00:00" VerticalAlignment="Center" FontSize="46"></TextBlock>
+                    <TextBlock x:Name="countDown" HorizontalAlignment="Center" Margin="0,-200,0,0" TextWrapping="Wrap" Text="00:00:00" VerticalAlignment="Center" FontSize="46"/>
+                    <RichTextBox x:Name="richTextBox" HorizontalAlignment="Center" Height="50" Margin="-125,0,0,0" VerticalAlignment="Center" Width="50" FontSize="32" >
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run Text="00"/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                    <RichTextBox x:Name="richTextBox_Copy" HorizontalAlignment="Center" Height="50" Margin="0,0,0,0" VerticalAlignment="Center" Width="50" FontSize="32" >
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run Text="00"/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                    <RichTextBox x:Name="richTextBox_Copy1" HorizontalAlignment="Center" Height="50" Margin="125,0,0,0" VerticalAlignment="Center" Width="50" FontSize="32">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run Text="00"/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+    
+</Window>

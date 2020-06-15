@@ -1,0 +1,17 @@
+C:\Users\Andreas K Gregersen\Desktop\GitHub\MultiFunctional-Ur\Multifunktionelt ur\bin\Debug\Multifunktionelt ur.exe.config
+C:\Users\Andreas K Gregersen\Desktop\GitHub\MultiFunctional-Ur\Multifunktionelt ur\bin\Debug\Multifunktionelt ur.exe
+C:\Users\Andreas K Gregersen\Desktop\GitHub\MultiFunctional-Ur\Multifunktionelt ur\bin\Debug\Multifunktionelt ur.pdb
+C:\Users\Andreas K Gregersen\Desktop\GitHub\MultiFunctional-Ur\Multifunktionelt ur\obj\Debug\Multifunktionelt ur.csprojAssemblyReference.cache
+C:\Users\Andreas K Gregersen\Desktop\GitHub\MultiFunctional-Ur\Multifunktionelt ur\obj\Debug\MainWindow.g.cs
+C:\Users\Andreas K Gregersen\Desktop\GitHub\MultiFunctional-Ur\Multifunktionelt ur\obj\Debug\App.g.cs
+C:\Users\Andreas K Gregersen\Desktop\GitHub\MultiFunctional-Ur\Multifunktionelt ur\obj\Debug\Multifunktionelt ur_MarkupCompile.cache
+C:\Users\Andreas K Gregersen\Desktop\GitHub\MultiFunctional-Ur\Multifunktionelt ur\obj\Debug\Multifunktionelt ur_MarkupCompile.lref
+C:\Users\Andreas K Gregersen\Desktop\GitHub\MultiFunctional-Ur\Multifunktionelt ur\obj\Debug\MainWindow.baml
+C:\Users\Andreas K Gregersen\Desktop\GitHub\MultiFunctional-Ur\Multifunktionelt ur\obj\Debug\Multifunktionelt ur.g.resources
+C:\Users\Andreas K Gregersen\Desktop\GitHub\MultiFunctional-Ur\Multifunktionelt ur\obj\Debug\Multifunktionelt_ur.Properties.Resources.resources
+C:\Users\Andreas K Gregersen\Desktop\GitHub\MultiFunctional-Ur\Multifunktionelt ur\obj\Debug\Multifunktionelt ur.csproj.GenerateResource.cache
+C:\Users\Andreas K Gregersen\Desktop\GitHub\MultiFunctional-Ur\Multifunktionelt ur\obj\Debug\Multifunktionelt ur.csproj.CoreCompileInputs.cache
+C:\Users\Andreas K Gregersen\Desktop\GitHub\MultiFunctional-Ur\Multifunktionelt ur\obj\Debug\Multifunktionelt ur.exe
+C:\Users\Andreas K Gregersen\Desktop\GitHub\MultiFunctional-Ur\Multifunktionelt ur\obj\Debug\Multifunktionelt ur.pdb
+C:\Users\Andreas K Gregersen\Desktop\GitHub\MultiFunctional-Ur\Multifunktionelt ur\obj\Debug\StopWatch.g.cs
+C:\Users\Andreas K Gregersen\Desktop\GitHub\MultiFunctional-Ur\Multifunktionelt ur\obj\Debug\StopWatch.baml

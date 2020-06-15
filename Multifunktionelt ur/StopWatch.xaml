@@ -1,0 +1,18 @@
+﻿<Window x:Class="Multifunktionelt_ur.StopWatch"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Multifunktionelt_ur"
+        mc:Ignorable="d"
+        Title="StopWatch" Height="500" Width="800">
+    <Grid>
+        <TextBlock x:Name="Watch" HorizontalAlignment="Left" Margin="330,75,0,0" TextWrapping="Wrap" Text="00:00:00" VerticalAlignment="Top" FontSize="46"/>
+        <Button x:Name="startStopWatch" Content="Start" HorizontalAlignment="Left" Margin="375,150,0,0" VerticalAlignment="Top" Width="75" Height="50" Click="StartStopWatch_Click"/>
+        <Button x:Name="stopStopWatch" Content="Stop" HorizontalAlignment="Left" Margin="475,150,0,0" VerticalAlignment="Top" Width="75" Height="50" Click="StopStopWatch_Click"/>
+        <Button x:Name="lap" Content="Omgang" HorizontalAlignment="Left" Margin="275,150,0,0" VerticalAlignment="Top" Width="75" Height="50" Click="Lap_Click" />
+        <Button x:Name="reset" Content="Nulstil" HorizontalAlignment="Left" Margin="375,215,0,0" VerticalAlignment="Top" Width="75" Height="50" Click="Reset_Click" />
+        <ListBox x:Name="lapsListBox" HorizontalAlignment="Left" Height="75" Margin="327,350,0,0" VerticalAlignment="Top" Width="175"/>
+
+    </Grid>
+</Window>
