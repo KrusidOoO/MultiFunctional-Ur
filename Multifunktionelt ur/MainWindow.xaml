@@ -43,27 +43,11 @@
                 <Grid>
                     <TextBlock x:Name="Watch2" HorizontalAlignment="Center" Margin="0,-450,0,0" TextWrapping="Wrap" Text="00:00:00" VerticalAlignment="Center" FontSize="46"></TextBlock>
                     <TextBlock x:Name="countDown" HorizontalAlignment="Center" Margin="0,-200,0,0" TextWrapping="Wrap" Text="00:00:00" VerticalAlignment="Center" FontSize="46"/>
-                    <RichTextBox x:Name="richTextBox" HorizontalAlignment="Center" Height="50" Margin="-125,0,0,0" VerticalAlignment="Center" Width="50" FontSize="32" >
-                        <FlowDocument>
-                            <Paragraph>
-                                <Run Text="00"/>
-                            </Paragraph>
-                        </FlowDocument>
-                    </RichTextBox>
-                    <RichTextBox x:Name="richTextBox_Copy" HorizontalAlignment="Center" Height="50" Margin="0,0,0,0" VerticalAlignment="Center" Width="50" FontSize="32" >
-                        <FlowDocument>
-                            <Paragraph>
-                                <Run Text="00"/>
-                            </Paragraph>
-                        </FlowDocument>
-                    </RichTextBox>
-                    <RichTextBox x:Name="richTextBox_Copy1" HorizontalAlignment="Center" Height="50" Margin="125,0,0,0" VerticalAlignment="Center" Width="50" FontSize="32">
-                        <FlowDocument>
-                            <Paragraph>
-                                <Run Text="00"/>
-                            </Paragraph>
-                        </FlowDocument>
-                    </RichTextBox>
+                    
+                    <Button x:Name="countDownButton" Content="Start" HorizontalAlignment="Center" Margin="0,140,0,0" VerticalAlignment="Center" Width="50" Height="40" Click="CountDownButton_Click"/>
+                    <TextBox x:Name="HourInput" HorizontalAlignment="Center" Height="60" Margin="-150,0,0,0" TextWrapping="Wrap" Text="00" VerticalAlignment="Center" Width="60" FontSize="46"/>
+                    <TextBox x:Name="MinuteInput" HorizontalAlignment="Center" Height="60" Margin="0,0,0,0" TextWrapping="Wrap" Text="00" VerticalAlignment="Center" Width="60" FontSize="46"/>
+                    <TextBox x:Name="SecondInput" HorizontalAlignment="Center" Height="60" Margin="150,0,0,0" TextWrapping="Wrap" Text="00" VerticalAlignment="Center" Width="60" FontSize="46"/>
                 </Grid>
             </TabItem>
         </TabControl>

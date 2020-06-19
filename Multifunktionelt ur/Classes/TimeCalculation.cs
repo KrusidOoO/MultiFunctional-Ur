@@ -8,7 +8,7 @@ namespace Multifunktionelt_ur.Classes
 {
     public class TimeCalculation
     {
-        DispatcherTimer timer = new DispatcherTimer();
+        readonly DispatcherTimer timer = new DispatcherTimer();
         
         public void StartTimer(string output)
         {

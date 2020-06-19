@@ -3,6 +3,8 @@ using System.Diagnostics;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Threading;
+using Multifunktionelt_ur.Classes;
+using System.Windows.Documents;
 
 namespace Multifunktionelt_ur
 {
@@ -12,11 +14,13 @@ namespace Multifunktionelt_ur
     public partial class MainWindow : Window
     {
         Stopwatch stopwatch = new Stopwatch();
+        Countdown CD = new Countdown();
+        
         
         public MainWindow()
         {
-            InitializeComponent();
             
+            InitializeComponent();
             stopStopWatch.Visibility = Visibility.Hidden;
             lap.Visibility = Visibility.Hidden;
             startStopWatch.Visibility = Visibility.Visible;
@@ -35,7 +39,6 @@ namespace Multifunktionelt_ur
                 DateTime now = DateTime.Now;
                 Watch.Text ="Klokken er:\n" + now.ToString("HH:mm:ss");
                 Watch2.Text = now.ToString("HH:mm:ss");
-
                 CommandManager.InvalidateRequerySuggested();
             }
             void dispatcherTimer2_tick(object sender, EventArgs e)
@@ -80,6 +83,12 @@ namespace Multifunktionelt_ur
             reset.Visibility = Visibility.Hidden;
             stopStopWatch.Visibility = Visibility.Hidden;
 
+        }
+
+        private void CountDownButton_Click(object sender, RoutedEventArgs e)
+        {
+            CD.countDown(Convert.ToInt32(HourInput.Text),Convert.ToInt32(MinuteInput.Text),Convert.ToInt32(SecondInput.Text));
+            countDown.Text = CountDown.ToString();
         }
     }
 }
