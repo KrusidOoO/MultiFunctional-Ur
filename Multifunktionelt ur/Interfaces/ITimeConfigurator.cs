@@ -8,7 +8,7 @@ namespace Multifunktionelt_ur.Interfaces
 {
     interface ITimeConfigurator
     {
-        void add();
-        void remove();
+        void Add();
+        void Remove();
     }
 }

@@ -55,8 +55,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Classes\Countdown.cs" />
     <Compile Include="Classes\TimeCalculation.cs" />
+    <Compile Include="Classes\TimerProperties.cs" />
     <Compile Include="Interfaces\ITimeConfigurator.cs" />
     <Compile Include="StopWatch.xaml.cs">
       <DependentUpon>StopWatch.xaml</DependentUpon>

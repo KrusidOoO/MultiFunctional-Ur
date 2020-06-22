@@ -43,15 +43,121 @@
                 <Grid>
                     <TextBlock x:Name="Watch2" HorizontalAlignment="Center" Margin="0,-450,0,0" TextWrapping="Wrap" Text="00:00:00" VerticalAlignment="Center" FontSize="46"></TextBlock>
                     <TextBlock x:Name="countDown" HorizontalAlignment="Center" Margin="0,-200,0,0" TextWrapping="Wrap" Text="00:00:00" VerticalAlignment="Center" FontSize="46"/>
-                    
-                    <Button x:Name="countDownButton" Content="Start" HorizontalAlignment="Center" Margin="0,140,0,0" VerticalAlignment="Center" Width="50" Height="40" Click="CountDownButton_Click"/>
-                    <TextBox x:Name="HourInput" HorizontalAlignment="Center" Height="60" Margin="-150,0,0,0" TextWrapping="Wrap" Text="00" VerticalAlignment="Center" Width="60" FontSize="46"/>
-                    <TextBox x:Name="MinuteInput" HorizontalAlignment="Center" Height="60" Margin="0,0,0,0" TextWrapping="Wrap" Text="00" VerticalAlignment="Center" Width="60" FontSize="46"/>
-                    <TextBox x:Name="SecondInput" HorizontalAlignment="Center" Height="60" Margin="150,0,0,0" TextWrapping="Wrap" Text="00" VerticalAlignment="Center" Width="60" FontSize="46"/>
+
+                    <Button x:Name="countDownButton" Content="Start" HorizontalAlignment="Center" Margin="0,200,0,0" VerticalAlignment="Center" Width="50" Height="40" Click="CountDownButton_Click"/>
+                    <TextBox x:Name="HourInput" HorizontalAlignment="Center" Height="60" Margin="-150,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="60" FontSize="46"/>
+                    <TextBox x:Name="MinuteInput" HorizontalAlignment="Center" Height="60" Margin="0,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="60" FontSize="46"/>
+                    <TextBox x:Name="SecondInput" HorizontalAlignment="Center" Height="60" Margin="150,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="60" FontSize="46"/>
+                    <TextBlock x:Name="Hours" HorizontalAlignment="Center" Margin="288,316,438,355" TextWrapping="Wrap" Text="Timer" VerticalAlignment="Center" Width="60" Height="20" FontSize="14" TextAlignment="Center"/>
+                    <TextBlock x:Name="Minutes" HorizontalAlignment="Center" Margin="363,316,363,355" TextWrapping="Wrap" Text="Minutter" VerticalAlignment="Center" Width="60" Height="20" FontSize="14" TextAlignment="Center"/>
+                    <TextBlock x:Name="Seconds" HorizontalAlignment="Center" Margin="438,316,288,355" TextWrapping="Wrap" Text="Sekunder" VerticalAlignment="Center" Width="60" Height="20" FontSize="14" TextAlignment="Center"/>
+                </Grid>
+            </TabItem>
+            <TabItem Name="Alarm">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Alarm" Foreground="Black"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid>
+                    <ListBox x:Name="HoursList" HorizontalAlignment="Left" Height="100" Margin="462,388,0,0" VerticalAlignment="Top" Width="100">
+                        <ListBoxItem Content="00"/>
+                        <ListBoxItem Content="01"/>
+                        <ListBoxItem Content="02"/>
+                        <ListBoxItem Content="03"/>
+                        <ListBoxItem Content="04"/>
+                        <ListBoxItem Content="05"/>
+                        <ListBoxItem Content="06"/>
+                        <ListBoxItem Content="07"/>
+                        <ListBoxItem Content="08"/>
+                        <ListBoxItem Content="09"/>
+                        <ListBoxItem Content="10"/>
+                        <ListBoxItem Content="11"/>
+                        <ListBoxItem Content="12"/>
+                        <ListBoxItem Content="13"/>
+                        <ListBoxItem Content="14"/>
+                        <ListBoxItem Content="15"/>
+                        <ListBoxItem Content="16"/>
+                        <ListBoxItem Content="17"/>
+                        <ListBoxItem Content="18"/>
+                        <ListBoxItem Content="19"/>
+                        <ListBoxItem Content="20"/>
+                        <ListBoxItem Content="21"/>
+                        <ListBoxItem Content="22"/>
+                        <ListBoxItem Content="23"/>
+                    </ListBox>
+                    <ListBox x:Name="MinutesList" HorizontalAlignment="Left" Height="100" Margin="567,388,0,0" VerticalAlignment="Top" Width="100">
+                        <ListBoxItem Content="00"/>
+                        <ListBoxItem Content="01"/>
+                        <ListBoxItem Content="02"/>
+                        <ListBoxItem Content="03"/>
+                        <ListBoxItem Content="04"/>
+                        <ListBoxItem Content="05"/>
+                        <ListBoxItem Content="06"/>
+                        <ListBoxItem Content="07"/>
+                        <ListBoxItem Content="08"/>
+                        <ListBoxItem Content="09"/>
+                        <ListBoxItem Content="10"/>
+                        <ListBoxItem Content="11"/>
+                        <ListBoxItem Content="12"/>
+                        <ListBoxItem Content="13"/>
+                        <ListBoxItem Content="14"/>
+                        <ListBoxItem Content="15"/>
+                        <ListBoxItem Content="16"/>
+                        <ListBoxItem Content="17"/>
+                        <ListBoxItem Content="18"/>
+                        <ListBoxItem Content="19"/>
+                        <ListBoxItem Content="20"/>
+                        <ListBoxItem Content="21"/>
+                        <ListBoxItem Content="22"/>
+                        <ListBoxItem Content="23"/>
+                        <ListBoxItem Content="24"/>
+                        <ListBoxItem Content="25"/>
+                        <ListBoxItem Content="26"/>
+                        <ListBoxItem Content="27"/>
+                        <ListBoxItem Content="28"/>
+                        <ListBoxItem Content="29"/>
+                        <ListBoxItem Content="30"/>
+                        <ListBoxItem Content="31"/>
+                        <ListBoxItem Content="32"/>
+                        <ListBoxItem Content="33"/>
+                        <ListBoxItem Content="34"/>
+                        <ListBoxItem Content="35"/>
+                        <ListBoxItem Content="36"/>
+                        <ListBoxItem Content="37"/>
+                        <ListBoxItem Content="38"/>
+                        <ListBoxItem Content="39"/>
+                        <ListBoxItem Content="40"/>
+                        <ListBoxItem Content="41"/>
+                        <ListBoxItem Content="42"/>
+                        <ListBoxItem Content="43"/>
+                        <ListBoxItem Content="44"/>
+                        <ListBoxItem Content="45"/>
+                        <ListBoxItem Content="46"/>
+                        <ListBoxItem Content="47"/>
+                        <ListBoxItem Content="48"/>
+                        <ListBoxItem Content="49"/>
+                        <ListBoxItem Content="50"/>
+                        <ListBoxItem Content="51"/>
+                        <ListBoxItem Content="52"/>
+                        <ListBoxItem Content="53"/>
+                        <ListBoxItem Content="54"/>
+                        <ListBoxItem Content="55"/>
+                        <ListBoxItem Content="56"/>
+                        <ListBoxItem Content="57"/>
+                        <ListBoxItem Content="58"/>
+                        <ListBoxItem Content="59"/>
+                    </ListBox>
+                    <ListBox x:Name="AlarmsListBox" HorizontalAlignment="Left" Height="200" Margin="97,194,0,0" VerticalAlignment="Top" Width="150" Background="LightGray" Foreground="Black"/>
+                    <Button x:Name="AddAlarmButton" Content="Tilføj" HorizontalAlignment="Left" Margin="447,533,0,0" VerticalAlignment="Top" Width="75" Click="AddAlarmButton_Click"/>
+                    <Button x:Name="EditSaveAlarmButton" Content="Gem" HorizontalAlignment="Left" Margin="527,533,0,0" VerticalAlignment="Top" Width="75" Click="EditSaveAlarmButton_Click"/>
+                    <Button x:Name="DeleteAlarmButton" Content="Slet" HorizontalAlignment="Left" Margin="607,533,0,0" VerticalAlignment="Top" Width="75" Click="DeleteAlarmButton_Click"/>
+                    <TextBox x:Name="AlarmDescription" HorizontalAlignment="Left" Height="45" Margin="447,488,0,0" TextWrapping="Wrap" Text="Alarm" VerticalAlignment="Top" Width="235" FontSize="16"/>
+
                 </Grid>
             </TabItem>
         </TabControl>
 
     </Grid>
-    
+
 </Window>
