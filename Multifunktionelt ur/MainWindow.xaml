@@ -28,7 +28,7 @@
                     <TextBlock x:Name="stopWatch" HorizontalAlignment="Left" Margin="330,75,0,0" TextWrapping="Wrap" Text="00:00:00" VerticalAlignment="Top" FontSize="46"/>
                     <Button x:Name="startStopWatch" Content="Start" HorizontalAlignment="Left" Margin="375,150,0,0" VerticalAlignment="Top" Width="75" Height="50" Click="StartStopWatch_Click"/>
                     <Button x:Name="stopStopWatch" Content="Stop" HorizontalAlignment="Left" Margin="475,150,0,0" VerticalAlignment="Top" Width="75" Height="50" Click="StopStopWatch_Click"/>
-                    <Button x:Name="lap" Content="Omgang" HorizontalAlignment="Left" Margin="275,150,0,0" VerticalAlignment="Top" Width="75" Height="50" Click="Lap_Click" />
+                    <Button x:Name="addLap" Content="Omgang" HorizontalAlignment="Left" Margin="275,150,0,0" VerticalAlignment="Top" Width="75" Height="50" Click="AddLap_Click" />
                     <Button x:Name="reset" Content="Nulstil" HorizontalAlignment="Left" Margin="375,215,0,0" VerticalAlignment="Top" Width="75" Height="50" Click="Reset_Click" />
                     <ListBox x:Name="lapsListBox" HorizontalAlignment="Left" Height="150" Margin="327,350,0,0" VerticalAlignment="Top" Width="175"/>
 
@@ -42,7 +42,7 @@
                 </TabItem.Header>
                 <Grid>
                     <TextBlock x:Name="Watch2" HorizontalAlignment="Center" Margin="0,-450,0,0" TextWrapping="Wrap" Text="00:00:00" VerticalAlignment="Center" FontSize="46"></TextBlock>
-                    <TextBlock x:Name="countDown" HorizontalAlignment="Center" Margin="0,-200,0,0" TextWrapping="Wrap" Text="00:00:00" VerticalAlignment="Center" FontSize="46"/>
+                    <TextBlock x:Name="countDown" HorizontalAlignment="Center" Margin="0,-200,0,0" TextWrapping="Wrap" Text="00" VerticalAlignment="Center" FontSize="46"/>
 
                     <Button x:Name="countDownButton" Content="Start" HorizontalAlignment="Center" Margin="0,200,0,0" VerticalAlignment="Center" Width="50" Height="40" Click="CountDownButton_Click"/>
                     <TextBox x:Name="HourInput" HorizontalAlignment="Center" Height="60" Margin="-150,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="60" FontSize="46"/>

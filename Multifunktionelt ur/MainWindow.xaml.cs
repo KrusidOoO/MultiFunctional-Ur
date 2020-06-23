@@ -1,5 +1,4 @@
-﻿using Multifunktionelt_ur.Classes;
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
@@ -14,6 +13,7 @@ namespace Multifunktionelt_ur
     public partial class MainWindow : Window
     {
         Stopwatch stopwatch = new Stopwatch();
+        DispatcherTimer dispatcherTimer = new DispatcherTimer();
 
 
 
@@ -25,7 +25,6 @@ namespace Multifunktionelt_ur
             lap.Visibility = Visibility.Hidden;
             startStopWatch.Visibility = Visibility.Visible;
             reset.Visibility = Visibility.Hidden;
-            DispatcherTimer dispatcherTimer = new DispatcherTimer();
             DispatcherTimer dispatcherTimer2 = new DispatcherTimer();
             dispatcherTimer.Tick += new EventHandler(dispatcherTimer_tick);
             dispatcherTimer2.Tick += new EventHandler(dispatcherTimer2_tick);
@@ -64,9 +63,9 @@ namespace Multifunktionelt_ur
             lap.Visibility = Visibility.Hidden;
         }
 
-        private void Lap_Click(object sender, RoutedEventArgs e)
+        private void AddLap_Click(object sender, RoutedEventArgs e)
         {
-            lapsListBox.Items.Add("Omgang " + lapsListBox.Items.Count.ToString() + ": " + stopWatch.Text.Remove(10, 5));
+            lapsListBox.Items.Add("Omgang " + (lapsListBox.Items.Count + 1).ToString() + ": " + stopWatch.Text.Remove(10, 5));
         }
 
         private void Reset_Click(object sender, RoutedEventArgs e)
@@ -88,13 +87,9 @@ namespace Multifunktionelt_ur
         private void CountDownButton_Click(object sender, RoutedEventArgs e)
         {
             DispatcherTimer dispatcherTimer = new DispatcherTimer();
-            dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 1,0);
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 1, 0);
             dispatcherTimer.Tick += new EventHandler(dispatcherTimer_tick3);
             dispatcherTimer.Start();
-            if(!countDown.Text.Contains("00:00:00")&&!dispatcherTimer.IsEnabled)
-            {
-                dispatcherTimer.Start();
-            }
         }
         void dispatcherTimer_tick3(object sender, EventArgs e)
         {
@@ -102,12 +97,18 @@ namespace Multifunktionelt_ur
             TimeSpan CountingDown = endtime.Subtract(DateTime.Now);
             var str = string.Format("{0}:{1}:{2}", CountingDown.Hours, CountingDown.Minutes, CountingDown.Seconds);
             countDown.Text = str;
+            double secondsLeft = (CountingDown - stopwatch.Elapsed).TotalSeconds;
+            if(secondsLeft<=0)
+            {
+                dispatcherTimer.Stop();
+                secondsLeft = 0;
+            }
             CommandManager.InvalidateRequerySuggested();
         }
 
         private void AddAlarmButton_Click(object sender, RoutedEventArgs e)
         {
-            var yeet = (HoursList.SelectedItem as ListBoxItem).Content; 
+            var yeet = (HoursList.SelectedItem as ListBoxItem).Content;
             var lmao = (MinutesList.SelectedItem as ListBoxItem).Content;
             var input = yeet + " : " + lmao + " \n" + AlarmDescription.Text;
             AlarmsListBox.Items.Add(input);
