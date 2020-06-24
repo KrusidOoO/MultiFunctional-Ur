@@ -44,13 +44,15 @@
                     <TextBlock x:Name="Watch2" HorizontalAlignment="Center" Margin="0,-450,0,0" TextWrapping="Wrap" Text="00:00:00" VerticalAlignment="Center" FontSize="46"></TextBlock>
                     <TextBlock x:Name="countDown" HorizontalAlignment="Center" Margin="0,-200,0,0" TextWrapping="Wrap" Text="00" VerticalAlignment="Center" FontSize="46"/>
 
-                    <Button x:Name="countDownButton" Content="Start" HorizontalAlignment="Center" Margin="0,200,0,0" VerticalAlignment="Center" Width="50" Height="40" Click="CountDownButton_Click"/>
+                    <Button x:Name="CountDownButton" Content="Start" HorizontalAlignment="Center" Margin="0,200,0,0" VerticalAlignment="Center" Width="50" Height="40" Click="CountDownButton_Click"/>
                     <TextBox x:Name="HourInput" HorizontalAlignment="Center" Height="60" Margin="-150,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="60" FontSize="46"/>
                     <TextBox x:Name="MinuteInput" HorizontalAlignment="Center" Height="60" Margin="0,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="60" FontSize="46"/>
                     <TextBox x:Name="SecondInput" HorizontalAlignment="Center" Height="60" Margin="150,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="60" FontSize="46"/>
                     <TextBlock x:Name="Hours" HorizontalAlignment="Center" Margin="288,316,438,355" TextWrapping="Wrap" Text="Timer" VerticalAlignment="Center" Width="60" Height="20" FontSize="14" TextAlignment="Center"/>
                     <TextBlock x:Name="Minutes" HorizontalAlignment="Center" Margin="363,316,363,355" TextWrapping="Wrap" Text="Minutter" VerticalAlignment="Center" Width="60" Height="20" FontSize="14" TextAlignment="Center"/>
                     <TextBlock x:Name="Seconds" HorizontalAlignment="Center" Margin="438,316,288,355" TextWrapping="Wrap" Text="Sekunder" VerticalAlignment="Center" Width="60" Height="20" FontSize="14" TextAlignment="Center"/>
+                    <ListBox x:Name="CountDownList" HorizontalAlignment="Left" Height="100" Margin="53,151,0,0" VerticalAlignment="Top" Width="100"/>
+
                 </Grid>
             </TabItem>
             <TabItem Name="Alarm">

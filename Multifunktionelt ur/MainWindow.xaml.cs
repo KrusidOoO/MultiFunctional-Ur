@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Multifunktionelt_ur.Classes;
+using System;
 using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
@@ -14,25 +15,26 @@ namespace Multifunktionelt_ur
     {
         Stopwatch stopwatch = new Stopwatch();
         DispatcherTimer dispatcherTimer = new DispatcherTimer();
-
+        DispatcherTimer dispatcherTimer3 = new DispatcherTimer();
 
 
         public MainWindow()
         {
+            TimeCalculation TC = new TimeCalculation(Watch.Text);
 
             InitializeComponent();
             stopStopWatch.Visibility = Visibility.Hidden;
-            lap.Visibility = Visibility.Hidden;
+            addLap.Visibility = Visibility.Hidden;
             startStopWatch.Visibility = Visibility.Visible;
             reset.Visibility = Visibility.Hidden;
-            DispatcherTimer dispatcherTimer2 = new DispatcherTimer();
             dispatcherTimer.Tick += new EventHandler(dispatcherTimer_tick);
-            dispatcherTimer2.Tick += new EventHandler(dispatcherTimer2_tick);
-            dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
-            dispatcherTimer2.Interval = new TimeSpan(0, 0, 0, 0, 1);
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 1, 0);
+
+            dispatcherTimer3.Interval = new TimeSpan(0, 0, 0, 1, 0);
+            dispatcherTimer3.Tick += new EventHandler(dispatcherTimer_tick3);
 
             dispatcherTimer.Start();
-            dispatcherTimer2.Start();
+
             void dispatcherTimer_tick(object sender, EventArgs e)
             {
                 DateTime now = DateTime.Now;
@@ -40,27 +42,24 @@ namespace Multifunktionelt_ur
                 Watch2.Text = now.ToString("HH:mm:ss");
                 CommandManager.InvalidateRequerySuggested();
             }
-            void dispatcherTimer2_tick(object sender, EventArgs e)
-            {
-                stopWatch.Text = stopwatch.Elapsed.ToString();
-                CommandManager.InvalidateRequerySuggested();
-            }
 
         }
+        #region Stopwatch
         private void StartStopWatch_Click(object sender, RoutedEventArgs e)
         {
             stopStopWatch.Visibility = Visibility.Visible;
-            lap.Visibility = Visibility.Visible;
+            addLap.Visibility = Visibility.Visible;
             startStopWatch.Visibility = Visibility.Hidden;
             reset.Visibility = Visibility.Hidden;
             stopwatch.Start();
+            stopWatch.Text = stopwatch.Elapsed.TotalHours.ToString() + " : " + stopwatch.Elapsed.TotalMinutes.ToString() + " : " + stopwatch.Elapsed.TotalSeconds.ToString();
         }
         private void StopStopWatch_Click(object sender, RoutedEventArgs e)
         {
             stopwatch.Stop();
             startStopWatch.Visibility = Visibility.Visible;
             reset.Visibility = Visibility.Visible;
-            lap.Visibility = Visibility.Hidden;
+            addLap.Visibility = Visibility.Hidden;
         }
 
         private void AddLap_Click(object sender, RoutedEventArgs e)
@@ -83,29 +82,33 @@ namespace Multifunktionelt_ur
             stopStopWatch.Visibility = Visibility.Hidden;
 
         }
+        #endregion
 
+        #region Countdown
         private void CountDownButton_Click(object sender, RoutedEventArgs e)
         {
-            DispatcherTimer dispatcherTimer = new DispatcherTimer();
-            dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 1, 0);
-            dispatcherTimer.Tick += new EventHandler(dispatcherTimer_tick3);
-            dispatcherTimer.Start();
+            dispatcherTimer3.Start();
         }
         void dispatcherTimer_tick3(object sender, EventArgs e)
         {
-            DateTime endtime = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, Convert.ToInt32(HourInput.Text), Convert.ToInt32(MinuteInput.Text), Convert.ToInt32(SecondInput.Text));
+            DateTime now = DateTime.Now;
+            DateTime endtime = new DateTime(now.Year, now.Month, now.Day, Convert.ToInt32(HourInput.Text), Convert.ToInt32(MinuteInput.Text), Convert.ToInt32(SecondInput.Text));
             TimeSpan CountingDown = endtime.Subtract(DateTime.Now);
             var str = string.Format("{0}:{1}:{2}", CountingDown.Hours, CountingDown.Minutes, CountingDown.Seconds);
             countDown.Text = str;
+            CountDownList.Items.Add(str);
             double secondsLeft = (CountingDown - stopwatch.Elapsed).TotalSeconds;
-            if(secondsLeft<=0)
+            if (secondsLeft <= 0)
             {
-                dispatcherTimer.Stop();
+                MessageBox.Show("Det er nu, det er nu");
+                dispatcherTimer3.Stop();
                 secondsLeft = 0;
             }
             CommandManager.InvalidateRequerySuggested();
         }
+        #endregion
 
+        #region Alarm
         private void AddAlarmButton_Click(object sender, RoutedEventArgs e)
         {
             var yeet = (HoursList.SelectedItem as ListBoxItem).Content;
@@ -126,5 +129,6 @@ namespace Multifunktionelt_ur
         {
             AlarmsListBox.Items.RemoveAt(AlarmsListBox.SelectedIndex);
         }
+        #endregion
     }
 }

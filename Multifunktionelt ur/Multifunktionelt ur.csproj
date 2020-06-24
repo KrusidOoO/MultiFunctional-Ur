@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Classes\CountDown.cs" />
     <Compile Include="Classes\TimeCalculation.cs" />
     <Compile Include="Classes\TimerProperties.cs" />
     <Compile Include="Interfaces\ITimeConfigurator.cs" />
